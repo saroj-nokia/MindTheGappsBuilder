@@ -29,7 +29,7 @@ jobs:
       - name: Clone repository
         run: |
           git config --global http.version HTTP/1.1
-          git clone --depth=1 -b ${{ env.ANDROIDV }} https://gitlab.com/saroj-nokia/vendor_gapps.git/
+          git clone --depth=1 -b ${{ env.ANDROIDV }} https://gitlab.com/Saroj-Tajpuriya/vendor_gapps/
 
       - name: Setup Java
         uses: actions/setup-java@v4
