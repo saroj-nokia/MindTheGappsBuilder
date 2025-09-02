@@ -67,11 +67,12 @@ jobs:
           if-no-files-found: warn
 
 
-      - name: Release
-        uses: softprops/action-gh-release@v2
-        if: github.event.inputs.release == 'true'
-        with:
-          tag_name: ${{ env.date }}
-          draft: false
-          prerelease: false
-          files: vendor_gapps/out/${{ matrix.arch }}/${{ env.date }}/*.*
+   - name: Release
+     uses: softprops/action-gh-release@v2
+     f: github.event.inputs.release == 'true'
+     with:
+      tag_name: "v${{ env.date }}-matrix.androidv−{{ matrix.arch }}"
+      name: "MindTheGapps matrix.androidv−{{ matrix.arch }} Build (${{ env.date }})"
+      draft: false
+      prerelease: false
+      files: vendor_gapps/out/.
