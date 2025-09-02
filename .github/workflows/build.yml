@@ -75,4 +75,4 @@ jobs:
           name: "MindTheGapps matrix.androidv−{{ matrix.arch }} Build (${{ env.date }})"
           draft: false
           prerelease: false
-          files: vendor_gapps/out/.
+          files: vendor_gapps/out/*.*
